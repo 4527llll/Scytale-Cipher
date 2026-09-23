@@ -18,7 +18,7 @@ This tool serves as a fundamental demonstration of how altering sequence, rather
 ## 🚀 Quick Start
 
 ### Prerequisites
-* Python 3.x
+* Python 3.14.2
 
 ### Usage
 1. Place your target plaintext inside `content.txt` in the same directory.
