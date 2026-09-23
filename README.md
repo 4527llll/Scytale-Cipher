@@ -24,4 +24,4 @@ This tool serves as a fundamental demonstration of how altering sequence, rather
 1. Place your target plaintext inside `content.txt` in the same directory.
 2. Run the script via your terminal:
    ```bash
-   python scytale.py
+   python Scytale-cipher.py
