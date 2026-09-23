@@ -40,8 +40,14 @@ if lockTF == 1: # main encryption
     except FileNotFoundError:
         print(f"Error: {red}content.txt{reset} not found. Please create the file first!")
         exit()
-
-    key = int(input("Input the key for encrypt: "))
+    while True: # key validation cheak
+        try:
+            key = int(input("Input the key (must be > 0): "))
+            if key > 0:
+                break
+            print("Key must be greater than 0.")
+        except ValueError:
+            print("Please enter a valid integer.")
     print("\n--- Encryption Result ---")
     result_text = encrypt(content,key)
     print(result_text)
@@ -59,8 +65,14 @@ elif lockTF == 2: # main decryption
     except FileNotFoundError:
         print(f"Error: {red}encryptionResult.txt{reset} not found. Please encrypt a file first!")
         exit()
-
-    key = int(input("Input the key for encrypt: "))
+    while True: # key validation cheak
+        try:
+            key = int(input("Input the key (must be > 0): "))
+            if key > 0:
+                break
+            print("Key must be greater than 0.")
+        except ValueError:
+            print("Please enter a valid integer.")
     print("\n--- Decryption Result ---")
     result_text = decrypt(content,key)
     print(result_text)
